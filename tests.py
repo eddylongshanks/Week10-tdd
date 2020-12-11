@@ -35,6 +35,15 @@ class CalculatorTests(unittest.TestCase):
     
     def test_subtract_should_return_ValueError_when_given_two_strings(self):
         self.assertRaises(ValueError, self.calculator.subtract, "fourty", "one")
+    
+    def test_divide_should_divide_numbers_when_given_two_integers(self):
+        result = self.calculator.divide(10,5)
+        expected = 2
+
+        self.assertEqual(result, expected)
+    
+    def test_divide_should_return_ValueError_when_given_two_strings(self):
+        self.assertRaises(ValueError, self.calculator.divide, "fifteen", "three")
 
 if __name__ == "__main__":
     unittest.main()
