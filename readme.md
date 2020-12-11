@@ -1,14 +1,12 @@
-# Example Readme file v1.0
+# Week 10 - Testing and TDD
 
-## Sub heading 
+## Task 1
 
-- List item 1
-- List item 2:
-  - Sub-list item 1
-  - Sub-list item 2
-  - Sub-list item 3
-- List item 3:
+- Create a basic class in app.py that has several functions (e.g. calculator)
+- Create a file called tests.py
+- Write Unit Tests in tests.py that test the following:
+ - The class in app.py is instantiated properly
+ - All functions in app.py have at least 1 associated  unit test
+ - Include a setUp() method with appropriate code
 
-### Notes
-
-Add hash symbols for smaller and smaller headings
+- Upload app.py and tests.py to new GitHub repo
