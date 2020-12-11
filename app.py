@@ -40,8 +40,8 @@ def add_user():
         if _error_summary:            
             return render_template("add_user.html", error_summary=_error_summary)
 
-        new_user = Users(firstname=_form['firstname'],
-                         secondname=_form['secondname'],
+        new_user = Users(firstname=_form['first-name'],
+                         secondname=_form['second-name'],
                          country=_form['country'])
 
         print(new_user)
@@ -66,4 +66,6 @@ def get_errors(form_to_validate):
             error_summary = f"Following information is required: {', '.join(invalid_input)}"
             return error_summary
 
-app.run(debug=True)
+       
+if __name__ == "__main__":
+    app.run(debug=True)
