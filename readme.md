@@ -10,7 +10,6 @@
   - The class in app.py is instantiated properly
   - All functions in app.py have at least 1 associated  unit test
   - Include a setUp() method with appropriate code
-
 - Upload app.py and tests.py to new GitHub repo
 
 ## Task 2
