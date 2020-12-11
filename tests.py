@@ -5,6 +5,9 @@ class CalculatorTests(unittest.TestCase):
 
     def setUp(self):
         self.calculator = Calculator()
+    
+    def test_calculator_should_instantiate(self):
+        self.assertIsInstance(self.calculator, Calculator)
 
     def test_add_should_return_sum_when_given_two_integers(self):
         result = self.calculator.add(4,5)
