@@ -1,5 +1,11 @@
 # Week 10 - Testing and TDD
 
+## Instructions for Use
+
+A simple flask db based user list from week 8
+- Click "Add User" to add a new user
+- Click "Delete User" to remove a user using the ID value shown in the user list
+
 ### Known Issues with Task 2
 
 - Had problems asserting database entries
