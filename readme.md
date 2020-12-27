@@ -1,5 +1,13 @@
 # Week 10 - Testing and TDD
 
+### Known Issues with Task 2
+
+- Had problems asserting database entries
+ - Unable to figure out how to assert based on an auto incrementing ID value
+ - When executing a test to add a user, was unable to then remove that user as part of the test
+ - When attempting to delete a user, had to guess on the ID value to remove and then assert based on that. Feels like I'm missing something, must be another way
+ - Tests work when using the existing database, calling Task 2 done; will not be using Flask for Assignment, to figure out how to alter tests to use a test-database would perhaps take a large amount of time and out of scope for this week's tasks, time best spent elsewhere
+
 ## Task 1
 
 (Contained in subdirectory "task_1")

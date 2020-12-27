@@ -3,6 +3,7 @@ class FieldNameProvider:
     """Provides the function to return a display-friendly name for the error summary in the View"""    
     def __init__(self):
         self.names = {
+            "id" : "ID",
             "first-name" : "First Name",
             "second-name" : "Second Name",
             "country" : "Country"

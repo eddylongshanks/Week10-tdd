@@ -18,7 +18,7 @@
                 </thead>    
                 {% for user in all_users %}
                     <tr>
-                        <td>{{ user.id }}</td>
+                        <td id="{{ user.id }}">{{ user.id }}</td>
                         <td>{{ user.firstname }}</td>
                         <td>{{ user.secondname }}</td>
                         <td>{{ user.country }}</td>
@@ -28,6 +28,9 @@
 
             <form action="/add_user" method="get">
                 <button type="submit" id="btn-add-user">Add User</button>
+            </form>
+            <form action="/delete_user" method="get">
+                <button type="submit" id="btn-del-user">Delete User</button>
             </form>
         </div>
     </div>

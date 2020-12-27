@@ -53,6 +53,36 @@ def add_user():
     return render_template("add_user.html")
 
 
+@app.route("/delete_user", methods=["GET", "POST"])
+def delete_user():
+    if request.method == "POST":
+        _form = request.form
+
+        _error_summary = get_errors(_form)
+
+        if _error_summary:            
+            return render_template("delete_user.html", error_summary=_error_summary)
+        
+        user_id_to_delete = _form['id']
+
+        try:
+            int(user_id_to_delete)
+
+            if int(user_id_to_delete) <= 0:
+                _error_summary = "ID must be a whole number, over zero"
+                return render_template("delete_user.html", error_summary=_error_summary)
+        except ValueError:
+            _error_summary = "ID must be a valid number"
+            return render_template("delete_user.html", error_summary=_error_summary)
+
+        Users.query.filter(Users.id == int(user_id_to_delete)).delete()
+        db.session.commit()
+
+        return redirect("/")
+
+    return render_template("delete_user.html")
+
+
 def get_errors(form_to_validate):
         invalid_input = list()
 
